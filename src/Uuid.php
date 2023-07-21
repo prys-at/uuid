@@ -283,6 +283,7 @@ class Uuid implements UuidInterface
     /**
      * Converts the UUID to a string for JSON serialization
      */
+    #[\ReturnTypeWillChange]
     public function jsonSerialize(): string
     {
         return $this->toString();

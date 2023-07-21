@@ -81,6 +81,7 @@ final class Decimal implements NumberInterface
         return $this->toString();
     }
 
+    #[\ReturnTypeWillChange]
     public function jsonSerialize(): string
     {
         return $this->toString();

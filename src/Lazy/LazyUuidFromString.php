@@ -24,6 +24,7 @@ use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
 use Ramsey\Uuid\UuidFactory;
 use Ramsey\Uuid\UuidInterface;
+use ReturnTypeWillChange;
 use ValueError;
 
 use function assert;
@@ -299,7 +300,7 @@ final class LazyUuidFromString implements UuidInterface
         return $this->uuid;
     }
 
-    #[\ReturnTypeWillChange]
+    #[ReturnTypeWillChange]
     public function jsonSerialize(): string
     {
         return $this->uuid;

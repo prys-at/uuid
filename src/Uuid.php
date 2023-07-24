@@ -25,6 +25,7 @@ use Ramsey\Uuid\Lazy\LazyUuidFromString;
 use Ramsey\Uuid\Rfc4122\FieldsInterface as Rfc4122FieldsInterface;
 use Ramsey\Uuid\Type\Hexadecimal;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
+use ReturnTypeWillChange;
 use ValueError;
 
 use function assert;
@@ -283,7 +284,7 @@ class Uuid implements UuidInterface
     /**
      * Converts the UUID to a string for JSON serialization
      */
-    #[\ReturnTypeWillChange]
+    #[ReturnTypeWillChange]
     public function jsonSerialize(): string
     {
         return $this->toString();

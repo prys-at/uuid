@@ -15,6 +15,7 @@ declare(strict_types=1);
 namespace Ramsey\Uuid\Type;
 
 use Ramsey\Uuid\Exception\InvalidArgumentException;
+use ReturnTypeWillChange;
 use ValueError;
 
 use function is_numeric;
@@ -81,7 +82,7 @@ final class Decimal implements NumberInterface
         return $this->toString();
     }
 
-    #[\ReturnTypeWillChange]
+    #[ReturnTypeWillChange]
     public function jsonSerialize(): string
     {
         return $this->toString();

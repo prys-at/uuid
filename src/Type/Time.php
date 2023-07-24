@@ -16,6 +16,7 @@ namespace Ramsey\Uuid\Type;
 
 use Ramsey\Uuid\Exception\UnsupportedOperationException;
 use Ramsey\Uuid\Type\Integer as IntegerObject;
+use ReturnTypeWillChange;
 use ValueError;
 
 use function json_decode;
@@ -67,7 +68,7 @@ final class Time implements TypeInterface
     /**
      * @return string[]
      */
-    #[\ReturnTypeWillChange]
+    #[ReturnTypeWillChange]
     public function jsonSerialize(): array
     {
         return [
